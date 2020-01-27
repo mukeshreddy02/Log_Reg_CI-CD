@@ -12,7 +12,7 @@ WORKDIR /app
 
 RUN pip3 install -r requirements.txt
 
-EXPOSE 8001
+EXPOSE 5000
 
 ENTRYPOINT [ "python3" ]
 
