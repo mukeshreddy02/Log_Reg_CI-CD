@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Your chances for Extramarital Affair</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <label for="rate_marriage"></label>
+            <input type="number" name="rate_marriage" id="rate_marriage" placeholder="Marriage Rating">
+            <label for="age"></label>
+            <input type="number" name="age" id="age" placeholder="Age">
+            <label for="yrs_married"></label>
+            <input type="number" name="yrs_married" id="yrs_married" placeholder="yrs_married">
+            <label for="children"></label>
+            <input type="number" name="children" id="children" placeholder="No of children">
+            <label for="religious"></label>
+            <input type="number" name="religious" id="religious" placeholder="Religious Rating">
+            <label for="educ"></label>
+            <input type="number" name="educ" id="educ" placeholder="Level of Education" step="any">
+
+            <label for="occupation"></label>
+            Occupation: <select name="occupation" id="occupation">
+  <option value="10000">farming/semi-skilled/unskilled</option>
+  <option value="01000">white collar</option>
+  <option value="00100">teacher/nurse/writer/technician/skilled</option>
+  <option value="00010">managerial/business</option>
+  <option value="00001">professional with advanced degree</option>
+  <option value="00000">student</option>
+</select>
+
+            <label for="occupation_husb"></label>
+            Husband Occupation: <select name="occupation_husb" id="occupation_husb">
+  <option value="10000">farming/semi-skilled/unskilled</option>
+  <option value="01000">white collar</option>
+  <option value="00100">teacher/nurse/writer/technician/skilled</option>
+  <option value="00010">managerial/business</option>
+  <option value="00001">professional with advanced degree</option>
+  <option value="00000">student</option>
+
+</select>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
