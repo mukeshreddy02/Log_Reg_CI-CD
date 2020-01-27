@@ -1,9 +1,11 @@
 
 FROM python:3
 
+ADD . /app
+
 WORKDIR /app
 
-COPY * /app
+
 
 RUN pip --no-cache-dir install -r requirements.txt
 
