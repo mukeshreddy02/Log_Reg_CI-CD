@@ -1,6 +1,6 @@
 node{
 
-    stage('SCM clone'){
+    stage('SCM checkout'){
         git url: 'https://github.com/mukeshreddy02/Log_Reg_CI-CD.git',branch: 'master'
     }
 
