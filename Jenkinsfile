@@ -10,8 +10,8 @@ node{
     }
 
     stage('Push Docker Image'){
-        withCredentials([string(credentialsId: 'Docker_Hub_Pwd', variable: 'Docker_Hub_Pwd')]) {
-          sh "docker login -u mukeshreddy02 -p ${Docker_Hub_Pwd}"
+        withCredentials([string(credentialsId: 'DockerHub', variable: 'DockerHub')]) {
+          sh "docker login -u mukeshreddy02 -p ${DockerHub}"
         }
         sh 'docker push mukeshreddy02/python_flask_log_reg'
      }
