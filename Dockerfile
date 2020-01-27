@@ -9,7 +9,6 @@ COPY * /app
 
 RUN pip --no-cache-dir install -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 8001
 
-ENTRYPOINT ["python3"]
-CMD ("app.py")
+CMD ["python3", "app.py"]
